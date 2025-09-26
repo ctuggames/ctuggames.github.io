@@ -1,0 +1,85 @@
+<html>
+    <head>
+                      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clever | Portal</title>
+      <link rel="icon" type="image/x-icon" href="https://i.ibb.co/5h70VCLf/cleverfavicon.png">
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,800;1,800&display=swap');
+</style>
+    </head>
+<style>
+        body {
+            font-family: "Work Sans", sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: white;
+            background-image: url('../images/ctugbg.gif');
+            background-position: center center;
+            background-size: cover;
+            height: 90vh;
+        }
+        body::-webkit-scrollbar {
+    display: none;
+}
+            .c-button {
+  font-family: "Work Sans";
+  appearance: none;
+  border: 0;
+border-color: #fff;
+  border-radius: 8px;
+  background: #666666;
+  color: #fff;
+  padding: 6px 40px;
+  font-size: 50px;
+  cursor: pointer;
+  align-items: center;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .2s;
+}
+  .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            text-align: center;
+            justify-content: center;
+    position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+        }
+        .centered {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.c-button:hover {
+    background-color: white;
+    color: black;
+      -ms-transform: scale(1.1); 
+  -webkit-transform: scale(1.1); 
+  transform: scale(1.1);
+}
+
+.color2 {
+    font-size: 50px;
+}
+
+.color {
+    margin-top: 20px;
+}
+</style>
+
+<body>
+    <div class="game-container">
+                      <h1 class="color2">CHOOSE YOUR VERSION</h1>
+    <a class="c-button" href="../game/eaglercraft152/index.html">Play Eaglercraft 1.5.2</a>
+        <a class="c-button" href="../game/eaglercraft18/index.html">Play EaglercraftX 1.8</a>
+          <a class="c-button" onclick="alert('Note: WASM-GC may not be supported on older browsers, so beware of that.')" href="../game/eaglercraft18wasmgc.html">Play EaglercraftX 1.8 WASM-GC</a>
+                  <a class="color">Note: The WASM-GC version runs better on most devices.</a>
+          </div>
+    
+</body>

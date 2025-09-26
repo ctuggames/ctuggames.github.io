@@ -1,0 +1,71 @@
+<html>
+    <head>
+                              <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>chillytoonsy's educational games</title>
+      <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+         <div class="page">
+            
+         </div>
+         <div class="gamepage">
+            <div class="topinsideinvis">
+<div class="gametab">
+    <div class="game-card">
+        <iframe id="gameframe" src="../game/supersmashbros64.html"> allowfullscreen></iframe>
+                      <div class="tools">
+                      <a id="fullscreenButton" class="c-buttongame">Play Fullscreen</a>
+                      <a id="ReloadButton" class="c-buttongame">Reload Game</a>
+                      
+                      <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const reloadButton = document.getElementById('ReloadButton');
+        const myIframe = document.getElementById('gameframe');
+
+        reloadButton.addEventListener('click', function() {
+            myIframe.contentWindow.location.reload(true);
+        });
+    });
+</script>
+
+        <script>
+    const myIframe = document.getElementById('gameframe');
+    const fullscreenButton = document.getElementById('fullscreenButton');
+
+    fullscreenButton.addEventListener('click', () => {
+        if (document.fullscreenElement) {
+            // If already in fullscreen, exit fullscreen
+            document.exitFullscreen();
+        } else {
+            // If not in fullscreen, request fullscreen for the iframe
+            if (myIframe.requestFullscreen) {
+                myIframe.requestFullscreen();
+            } else if (myIframe.mozRequestFullScreen) { /* Firefox */
+                myIframe.mozRequestFullScreen();
+            } else if (myIframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                myIframe.webkitRequestFullscreen();
+            } else if (myIframe.msRequestFullscreen) { /* IE/Edge */
+                myIframe.msRequestFullscreen();
+            }
+        }
+    });
+    </script>
+    </div>
+</div>
+            </div>
+         </div>
+        </div>
+          <div class="topheader">
+            <div class="imgleft">
+                <a><img src="../images/ctug_logo.png" width="110"></a>
+                </div>
+            <div class="buttoncollectionright">
+                <a href="../" class="button">Home</a>
+                <a href="../allgames/" class="button">All Games</a>
+                <a href="../settings.html" class="button">Settings</a>
+            </div>
+        </div>
+    </body>
+</html>
