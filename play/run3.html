@@ -14,7 +14,63 @@
             <div class="topinsideinvis">
 <div class="gametab">
     <div class="game-card">
-        <iframe id="gameframe" src="../game/run3"> allowfullscreen></iframe>
+        <iframe id="gameframe" srcdoc="
+            &lt;html&gt;&lt;head&gt;&lt;style&gt;
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  #container {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  canvas {
+    display: block;
+  }
+&lt;/style&gt;
+&lt;script src=&quot;https://unpkg.com/@ruffle-rs/ruffle&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+window.RufflePlayer = window.RufflePlayer || {};
+window.RufflePlayer.config = {
+&quot;autoplay&quot;: &quot;off&quot;,
+&quot;polyfills&quot;: true,
+&quot;letterbox&quot;: &quot;on&quot;,
+&quot;backgroundColor&quot;: null,
+&quot;scale&quot;: &quot;showAll&quot;,
+&quot;allowFullscreen&quot;: true,
+&quot;forceScale&quot;: true,
+&quot;forceAlign&quot;: true,
+&quot;splashScreen&quot;: true,
+&quot;wmode&quot;: &quot;Window&quot;,
+&quot;unmuteOverlay&quot;: &quot;hidden&quot;,
+&quot;quality&quot;: &quot;high&quot; };
+window.addEventListener(&quot;load&quot;, (event) =&gt; {
+const ruffle = window.RufflePlayer.newest();
+const player = ruffle.createPlayer();
+const container = document.getElementById(&quot;container&quot;);
+container.appendChild(player);
+player.load(&quot;/assets/flash/run3.swf&quot;);
+player.style.width = &quot;100%&quot;;
+player.style.height = &quot;100%&quot;;
+});
+&lt;/script&gt;
+&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;container&quot;&gt;
+&lt;/div&gt;
+
+
+&lt;script type=&quot;text/javascript&quot;&gt;window.SDK_OPTIONS={gameId:&quot;r2tzpy9cgrn2u4xgzc9z0zbtvxm16mby&quot;,onEvent:function(a){switch(a.name){case&quot;SDK_GAME_PAUSE&quot;:break;case&quot;SDK_GAME_START&quot;:break;case&quot;SDK_READY&quot;:break}}};(function(a,b,c){var d=a.getElementsByTagName(b)[0];a.getElementById(c)||(a=a.createElement(b),a.id=c,a.src=&quot;https://cdn.jsdelivr.net/gh/st39/sdk@main/sdkjs.js&quot;,d.parentNode.insertBefore(a,d))})(document,&quot;script&quot;,&quot;gamemonetize-sdk&quot;);&lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;let isAdShown=false;function onClick(e){if(!isAdShown&&typeof sdk!=='undefined'&&typeof sdk.showBanner==='function'){sdk.showBanner();isAdShown=true}window.removeEventListener(&quot;click&quot;,onClick)}window.addEventListener(&quot;click&quot;,onClick);&lt;/script&gt;
+
+&lt;/body&gt;&lt;/html&gt;"> allowfullscreen></iframe>
                       <div class="tools">
                       <a id="fullscreenButton" class="c-buttongame">Play Fullscreen</a>
                       <a id="changeversion" class="c-buttongame">Reload Game</a>
